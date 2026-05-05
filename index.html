@@ -2531,11 +2531,7 @@ var v62Popup = `
 `;
 
 
-var isMobile = window.innerWidth < 768;
-var map = L.map('map').setView(
-    [53.9, 27.56],
-    isMobile ? 10 : 6
-);
+var map = L.map('map').setView([53.9, 27.56], 6);
 L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
@@ -3513,9 +3509,7 @@ function hideRoutes() {
     document.getElementById("routeDescription").innerHTML = "";
 }
 
-if (window.innerWidth < 768) {
-    map.setZoom(9);
-}
+
 </script>
 
 </body>
