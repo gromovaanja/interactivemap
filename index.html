@@ -83,41 +83,6 @@
     cursor: pointer;
     border-radius: 6px;
 }
-    @media (max-width: 768px) {
-
-    .popup-card {
-        width: 300px;
-        font-size: 16px;
-    }
-
-    .popup-card h2 {
-        font-size: 22px;
-    }
-
-    .popup-card p {
-        font-size: 17px;
-    }
-
-    .route-btn {
-        font-size: 18px;
-        padding: 12px;
-    }
-
-    .custom-marker img {
-        width: 30px !important;
-    }
-
-    #sidebar {
-        width: 90% !important;
-    }
-
-    .leaflet-control-zoom a {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 22px;
-    }
-}
 </style>
 </head>
 
@@ -2561,8 +2526,7 @@ var v62Popup = `
 `;
 
 
-var zoomLevel = window.innerWidth < 768 ? 8 : 6;
-var map = L.map('map').setView([53.9, 27.56], zoomLevel);
+var map = L.map('map').setView([53.9, 27.56], 6);
 L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
