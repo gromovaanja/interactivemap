@@ -2561,7 +2561,8 @@ var v62Popup = `
 `;
 
 
-var map = L.map('map').setView([53.9, 27.56], 6);
+var zoomLevel = window.innerWidth < 768 ? 8 : 6;
+var map = L.map('map').setView([53.9, 27.56], zoomLevel);
 L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
