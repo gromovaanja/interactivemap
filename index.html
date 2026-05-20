@@ -2528,6 +2528,18 @@ var v62Popup = `
     <p><span> РАЗДЗЕЛ: </span> нематэрыяльная ГКК </p>
 </div>
 `;
+      var culturePopup = `
+<div class="popup-card">
+    <h2>Культура беларускай дуды на Міншчыне</h2>
+   <p><span>ШЫФР:</span> 63БЛ000152 </p>
+    <p><span>ДАТАВАННЕ:</span> - </p>
+    <p><span>МЕСЦА ЗНАХОДЖАННЯ:</span>М інская вобласць, Маладзечанскі раён</p>
+    <p><span>КАТЭГОРЫЯ:</span> Б </p>
+    <p><span>РАДА:</span> рашэнне Рады 22.05.2023 № 04-01-02/4 </p>
+    <p><span>ДЗЯРЖАУНЫ ОРГАН: </span>пастанова Міністэрства культуры 30.05.2023 № 80</p>
+    <p><span> РАЗДЗЕЛ: </span> нематэрыяльная ГКК </p>
+</div>
+`;
 
 
 var map = L.map('map').setView([53.9, 27.56], 6);
@@ -2922,6 +2934,10 @@ L.marker([54.197519, 26.824348], { icon: yellowIcon })
    //карагод
 L.marker([54.332375, 26.602379], { icon: yellowIcon })
  .bindPopup(karagodPopup, { maxWidth: 300 })
+ .addTo(categoryБLayer);
+     //культура
+L.marker([54.332375, 26.602379], { icon: yellowIcon })
+ .bindPopup(culturePopup, { maxWidth: 300 })
  .addTo(categoryБLayer);
 
   //в1
